@@ -1,0 +1,1195 @@
+OOps concepts:
+class Student
+{
+    int rollno;
+    String name;
+    String section;
+    String address;
+    void reading()
+    {
+        System.out.println(name+"reading");
+    }
+    void writing()
+    {
+        System.out.println(name+"writing");
+        
+    }
+}
+    class Main
+    {
+    public static void main (String args[])
+    {
+        Student std1=new Student();
+        std1.rollno=1;
+        std1.name="Anil";
+        std1.section="A";
+        std1.address="Warangal";
+        std1.reading();
+        std1.writing();
+        System.out.println("Student1 Information:");
+        System.out.println(std1.rollno+std1.name+std1.section+std1.address);
+         Student std2=new Student();
+        std2.rollno=2;
+        std2.name="Raju";
+        std2.section="B";
+        std2.address="Hyd";
+        std2.reading();
+        std2.writing();
+        System.out.println("Student2 Information:");
+        System.out.println(std2.rollno+std2.name+std2.section+std2.address);
+    
+        
+    }
+}
+-------------------------------------
+class Details
+{
+    String sname;
+    int srollno;
+    String ssection;
+    float sinternal_marks;
+    float s_external_marks;
+    float sproject_marks;
+    void  grade()
+    {
+    float total_marks=(sinternal_marks+ sexternal_marks+sproject_marks);
+    float max_marks=300;
+   float percentage=(total_marks/max_marks)*100;
+   System.out.println(percentage);
+   
+        if (percentage>=90 && percentage<=100)
+            {
+        System.out.println("Grade A");
+        }
+        else if (percentage>=80 && percentage<=90)
+       
+        {
+            System.out.println("Grade B");
+        }
+        else if (percentage>=70 && percentage<=80)
+        {
+            System.out.println("Grade C");
+        }
+        else if (percentage>=60 && percentage<=70)
+        {
+        System.out.println("Grade D");
+        }
+       else if (percentage>=50 && percentage<=60)
+        {
+        System.out.println("Grade E");
+        }
+        else  if (percentage>=40 && percentage<=50)
+        {
+           
+        System.out.println("Grade f");
+        }
+        else
+        {
+             System.out.println("Fail");
+        }
+   }
+}
+class Student{
+    public static void main(String args[])
+    {
+        Details std1=new Details();
+        std1.sname="Anil";
+        std1.srollno=1;
+        std1.ssection="A";
+        std1.sinternal_marks=98;
+        std1.s_external_marks=88;
+        std1.sproject_marks=90;
+        std1.grade();
+        System.out.println("-----------student1 details---------");
+        System.out.println("name:"+std1.sname+"\nrollno:"+std1.srollno+"\nsection:"+std1.ssection);
+         Details std2=new Details();
+        std2.sname="Raju";
+        std2.srollno=2;
+        std2.ssection="AB";
+        std2.sinternal_marks=68;
+        std2.s_external_marks=78;
+        std2.sproject_marks=80;
+        std2.grade();
+        System.out.println("-----------student2 details---------");
+        System.out.println("name:"+std2.sname+"\nrollno:"+std2.srollno+"\nsection:"+std2.ssection );
+        
+    }
+}
+--------------------------
+class Details
+{
+    int eid;
+    String ename;
+    String edpt;
+    float esalary;
+    String eaddress;
+     void  calculate()
+    {
+        if (esalary>10000 && esalary<20000)
+        {
+       float HRA=(esalary)*25/100;
+       float DA=(esalary)*45/100;
+        float grosssalary=esalary+HRA+DA;
+        System.out.println(ename + grosssalary);
+    }
+    else if (esalary>20000 && esalary<40000)
+    {
+       float HRA=(esalary)*25/100;
+       float DA=(esalary)*20/100;
+       float grosssalary=esalary+HRA+DA;
+         System.out.println(ename+grosssalary);
+    
+  }
+   else
+    {
+        float HRA=(esalary)*30/100;
+       float DA=(esalary)*30/100;
+       float grosssalary=esalary+HRA+DA;
+        System.out.println(ename+grosssalary);
+    }
+    }
+}
+    class Employee
+    {
+    public static void main (String args[])
+    {
+        Details emp11=new Details();
+        emp11.eid=11;
+        emp11.ename="Anil";
+        emp11.edpt="IT";
+        emp11.esalary=15000;
+        emp11.eaddress="Warangal";
+       emp11.calculate();
+        System.out.println("Employee1 Information:");
+        System.out.println(emp11.eid+emp11.ename+emp11.edpt+emp11.esalary+emp11.eaddress);
+       Details emp12=new Details();
+        emp12.eid=12;
+        emp12.ename="Santhosh";
+        emp12.edpt="IT";
+        emp12.esalary=55000;
+        emp12.eaddress="Warangal";
+       emp12.calculate();
+        System.out.println("Employee2 Information:");
+        System.out.println(emp12.eid+emp12.ename+emp12.edpt+emp12.esalary+emp12.eaddress);
+    
+        
+    }
+}
+---------------------------
+class Details
+{
+    String name;
+    String color;
+    String bread;
+    String eyecolor;
+    void barkmethod()
+    {
+        System.out.println(name+"barking");
+    }
+    void eat()
+    {
+        System.out.println(name+"eating");
+        
+    }
+}
+    class Dog
+    {
+    public static void main (String args[])
+    {
+        Details dog1=new Details();
+        dog1.name="Rocky";
+        dog1.color="White";
+        dog1.bread="German Shepord";
+        dog1.eyecolor="light yellow";
+        dog1.barkmethod();
+        dog1.eat();
+        System.out.println("------Dog1 Information-----------");
+        System.out.println(dog1.name+dog1.color+dog1.bread+dog1.eyecolor);
+         Details dog2=new Details();
+        dog2.name="Leo";
+        dog2.color="black";
+        dog2.bread="bulldog";
+        dog2.eyecolor="white";
+        dog2.barkmethod();
+        dog2.eat();
+        System.out.println("------------Dog2 Information------------");
+        System.out.println(dog2.name+dog2.color+dog2.bread+dog2.eyecolor);
+    
+        
+    }
+}
+---------------------------------
+
+import java.util.*;
+class Details
+{
+    
+    String name;
+    String bread;
+    String color;
+    String eyecolor;
+    void input()
+    {
+        Scanner sc=new Scanner(System.in);
+       
+        System.out.println("enter name");
+        name=sc.next();
+        System.out.println("enter bread");
+        bread=sc.next();
+        System.out.println("enter color");
+        color=sc.next();
+        System.out.println("enter eyecolor");
+        eyecolor=sc.next();
+        
+    }
+    void display()
+    {
+        System.out.println("name:"+name+"\n bread:"+bread+"\ncolor:"+color+"\neyecolor:"+eyecolor);
+    }
+    
+    void bark()
+    {
+        System.out.println(name+" barking");
+    }
+    void eat()
+    {
+        System.out.println(name+" eating");
+    }
+    
+    
+}
+class Dog2
+{
+    public static void main(String args[])
+    {
+        Details dog1=new Details();
+     
+       dog1.input();
+        System.out.println("dog 1 information");
+        dog1.display();
+        dog1.bark();
+        dog1.eat();
+        Details dog2=new Details();
+        dog2.input();
+        System.out.println("dog 2 information");
+     dog2.display();
+     dog2.bark();
+     dog2.eat();
+    }
+}
+-----------------------------
+import java.util.*;
+class Details
+{
+    int eid;
+    String ename;
+    String edpt;
+    float esalary;
+    String eaddress;
+    void input()
+    {
+        Scanner sc=new Scanner(System.in);
+       System.out.println("enter id");
+       eid=sc.nextInt();
+        System.out.println("enter name");
+        ename=sc.next();
+        System.out.println("enter Dpt");
+        edpt=sc.next();
+        System.out.println("enter salary");
+        esalary=sc.nextFloat();
+        System.out.println("enter address");
+        eaddress=sc.next();
+    }
+    void display()
+    {
+        System.out.println("Id:"+eid+"\nName:"+ename+"\nDpt:"+edpt+"\nSalary:"+esalary+"\nAddress:"+eaddress);
+    }
+     void  calculate()
+    {
+        if (esalary>10000 && esalary<20000)
+        {
+       float HRA=(esalary)*25/100;
+       float DA=(esalary)*45/100;
+        float grosssalary=esalary+HRA+DA;
+        System.out.println(ename +"\nGrosssalary:"+ grosssalary);
+    }
+    else if (esalary>20000 && esalary<40000)
+    {
+       float HRA=(esalary)*25/100;
+       float DA=(esalary)*20/100;
+       float grosssalary=esalary+HRA+DA;
+         System.out.println(ename+"\nGrosssalary:"+grosssalary);
+    
+  }
+   else
+    {
+        float HRA=(esalary)*30/100;
+       float DA=(esalary)*30/100;
+       float grosssalary=esalary+HRA+DA;
+        System.out.println(ename+"\nGrosssalary:"+grosssalary);
+    }
+    }
+}
+    class Employee2
+    {
+    public static void main (String args[])
+    {
+        Details emp11=new Details();
+        emp11.input();
+         System.out.println("Employee11 Information:");
+        emp11.display();
+        emp11.calculate();
+        Details emp12=new Details();
+        emp12.input();
+        System.out.println("Employee22 Information:");
+        emp12.display();
+        emp12.calculate();
+        
+    }
+}
+----------------------------------
+
+import java.util.*;
+class Student
+{
+    int rollno;
+    String name;
+    String section;
+    int marks;
+    String address;
+    void input()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter roolno");
+        rollno=sc.nextInt();
+        System.out.println("enter name");
+        name=sc.next();
+        System.out.println("enter section");
+        section=sc.next();
+        System.out.println("enter marks");
+        marks=sc.nextInt();
+        System.out.println("enter address");
+        address=sc.next();
+        
+    }
+    void display()
+    {
+        System.out.println(rollno+"\n"+name+"\n"+section+"\n"+marks+"\n"+address);
+    }
+    
+    void reading()
+    {
+        System.out.println(name+" reading");
+    }
+    void writing()
+    {
+        System.out.println(name+" Writing");
+    }
+    
+    
+}
+class Main2
+{
+    public static void main(String args[])
+    {
+        Student std1=new Student();
+     
+       std1.input();
+        System.out.println("Student 1 informatio");
+        std1.display();
+        std1.reading();
+        std1.writing();
+        Student std2=new Student();
+        std2.input();
+        System.out.println("Student 2 informatio");
+      std2.display();
+        std2.reading();
+        std2.writing();
+        
+
+        
+    }
+}
+------------------------------
+import java.util.*;
+class Details
+{
+    String sname;
+    int srollno;
+    String ssection;
+    float sinternal_marks;
+    float external_marks;
+    float sproject_marks;
+    void input()
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Name:");
+        sname=sc.next();
+        System.out.println("Enter Rollno:");
+        srollno=sc.nextInt();
+        System.out.println("Enter section");
+        ssection=sc.next();
+        System.out.println("Enter internal marks");
+        sinternal_marks=sc.nextFloat();
+        System.out.println("Enter External marks:");
+        external_marks=sc.nextFloat();
+        System.out.println("Enter project marks");
+        sproject_marks=sc.nextFloat();
+    }
+    void display()
+    {
+    System.out.println("Name:"+sname+"\nRollno:"+srollno+"\nsection:"+ssection);
+    }
+     void  grade()
+    {
+    float total_marks=(sinternal_marks+ external_marks+sproject_marks);
+    float max_marks=300;
+   float percentage=(total_marks/max_marks)*100;
+   System.out.println(percentage);
+   
+        if (percentage>=90 && percentage<=100)
+            {
+        System.out.println("Grade A");
+        }
+        else if (percentage>=80 && percentage<=90)
+       
+        {
+            System.out.println("Grade B");
+        }
+        else if (percentage>=70 && percentage<=80)
+        {
+            System.out.println("Grade C");
+        }
+        else if (percentage>=60 && percentage<=70)
+        {
+        System.out.println("Grade D");
+        }
+       else if (percentage>=50 && percentage<=60)
+        {
+        System.out.println("Grade E");
+        }
+        else  if (percentage>=40 && percentage<=50)
+        {
+           
+        System.out.println("Grade f");
+        }
+        else
+        {
+             System.out.println("Fail");
+        }
+    }
+   
+}
+class Student2
+{
+    public static void main(String args[])
+    {
+        Details std1=new Details();
+        std1.input();
+         System.out.println("-----------student1 details---------");
+        std1.display();
+        std1.grade();
+         Details std2=new Details();
+        std2.input();
+        System.out.println("-----------student2 details---------");
+        std2.display();
+         std2.grade();
+        
+    }
+}
+-----------------------------------------------------------------------
+class Calculator
+{
+    static void cube(int a)
+    {
+     int cube=a*a*a;
+        System.out.println(cube);
+    }
+}
+class Cube
+{
+    public static void main(String args[])
+    {
+        Calculator.cube(10);
+    }
+}
+------------------------------------
+import java.util.*;
+class Details
+{
+    int eid;
+    String ename;
+    String edpt;
+    float esalary;
+    String eaddress;
+   //constructor using this key word
+   Details(int eid,String ename,String edpt,float esalary,String eaddress)
+   {
+       this.eid=eid;
+       this.ename=ename;
+       this.edpt=edpt;
+       this.esalary=esalary;
+       this.eaddress=eaddress;
+   }
+   Details(int eid,String ename,String edpt, float esalary)
+   {
+        this.eid=eid;
+       this.ename=ename;
+       this.edpt=edpt;
+       this.esalary=esalary;
+   }
+   Details(int eid,String ename,String edpt)
+   {
+        this.eid=eid;
+       this.ename=ename;
+       this.edpt=edpt;
+   }
+   Details(int eid,String ename)
+   {
+      this.eid=eid;
+       this.ename=ename;  
+   }
+    void display()
+    {
+        System.out.println("Id:"+eid+"\nName:"+ename+"\nDpt:"+edpt+"\nSalary:"+esalary+"\nAddress:"+eaddress);
+    }
+     void  calculate()
+    {
+        if (esalary>10000 && esalary<20000)
+        {
+       float HRA=(esalary)*25/100;
+       float DA=(esalary)*45/100;
+        float grosssalary=esalary+HRA+DA;
+        System.out.println(ename +"\nGrosssalary:"+ grosssalary);
+    }
+    else if (esalary>20000 && esalary<40000)
+    {
+       float HRA=(esalary)*25/100;
+       float DA=(esalary)*20/100;
+       float grosssalary=esalary+HRA+DA;
+         System.out.println(ename+"\nGrosssalary:"+grosssalary);
+    
+  }
+   else
+    {
+        float HRA=(esalary)*30/100;
+       float DA=(esalary)*30/100;
+       float grosssalary=esalary+HRA+DA;
+        System.out.println(ename+"\nGrosssalary:"+grosssalary);
+    }
+    }
+}
+    class Employeeconstructor
+    {
+    public static void main (String args[])
+    {
+        Details emp11=new Details(111,"Anil","IT",50000,"WARANGAL");
+       // emp11.input();
+         System.out.println("----------------Employee11 Information:--------------");
+        emp11.display();
+        emp11.calculate();
+        Details emp12=new Details(222,"Santhosh","IT",25000);
+        System.out.println("------------------Employee22 Information:----------------");
+        emp12.display();
+        emp12.calculate();
+         Details emp13=new Details(333,"Raju","Non-IT");
+        System.out.println("----------------Employee3 Information:-------------------");
+        emp13.display();
+        emp13.calculate();
+          Details emp14=new Details(444,"Revanth");
+        System.out.println("-----------------Employee4 Information:---------------------");
+        emp14.display();
+        emp14.calculate();
+    }
+}
+---------------------------------------------
+class Factorial
+{
+    static void fact(int a)
+    {
+       int fact=1;
+        for (int i=1;i<=a;i++)
+        {
+            fact=fact*i;
+        }
+        System.out.println(fact);
+    }
+}
+class Factn
+{
+    public static void main(String args[])
+    {
+        Factorial.fact(5);
+    }
+----------------------------------------------
+INHERITANCE PRACTISE PROGRAMS:
+ class Employee
+{
+int empid;
+String name;
+int salary;
+String DOB;
+double HRA()
+{
+double hra=(salary*20)/100;
+return hra;
+}
+}
+class Manager extends Employee
+{
+double DA()
+{
+double da=(salary*10)/100;
+return da;
+}
+}
+
+class clerk extends Employee
+{
+double PF()
+{
+double pf=(salary*2)/100;
+return pf;
+}
+}
+class Hirarichal
+{
+public static void main(String args[])
+{
+clerk c=new clerk();
+c.salary=2000;
+double pf=c.PF();
+double totalsalary=pf+c.salary;
+System.out.println(totalsalary);
+}
+}
+------------------------------------------------------
+class Student
+{
+    int sid;
+    String sname;
+    String section;
+    String address;
+}
+class Exam extends Student
+{
+    float internal_marks;
+    float external_marks;
+}
+class Project extends Exam
+{
+    float project_marks;
+}
+class Multilevel 
+{
+    public static void main(String args[])
+    {
+        Project result=new Project();
+        result.sid=111;
+        result.sname="Anil";
+        result.section="A";
+        result.address="WARANGAL";
+        System.out.println("ID:"+result.sid+"\nNAME:"+result.sname+"\nSECTION:"+result.section+"\nADDRESS:"+result.address);
+        result.internal_marks=99;
+        result.external_marks=88;
+        result.project_marks=88;
+        float total_marks=(result.internal_marks+result.external_marks+result.project_marks);
+        System.out.println(total_marks);
+        float max_marks=300;
+        float percentage=(total_marks/max_marks)*100;
+        System.out.println(percentage);
+          if (percentage>=90 && percentage<=100)
+            {
+        System.out.println("Grade A");
+        }
+        else if (percentage>=80 && percentage<=90)
+       
+        {
+            System.out.println("Grade B");
+        }
+        else if (percentage>=70 && percentage<=80)
+        {
+            System.out.println("Grade C");
+        }
+        else if (percentage>=60 && percentage<=70)
+        {
+        System.out.println("Grade D");
+        }
+       else if (percentage>=50 && percentage<=60)
+        {
+        System.out.println("Grade E");
+        }
+        else  if (percentage>=40 && percentage<=50)
+        {
+           
+        System.out.println("Grade f");
+        }
+        else
+        {
+             System.out.println("Fail");
+        }
+    }
+}
+----------------------------------------------------------
+ class Employee
+{
+int empid;
+String name;
+int salary;
+String DOB;
+double HRA()
+{
+double hra=(salary*20)/100;
+return hra;
+}
+}
+class Manager extends Employee
+{
+double DA()
+{
+double da=(salary*10)/100;
+return da;
+}
+}
+
+class Single
+{
+public static void main(String args[])
+{
+Manager Anil=new Manager();
+Anil.salary=20000;
+System.out.println(Anil.salary);
+double hr=Anil.HRA();
+System.out.println(hr);
+double d=Anil.DA();
+System.out.println(d);
+double grosssalary=Anil.salary+d+hr;
+System.out.println(grosssalary);
+}
+}
+---------------------------------------------------
+import java.util.*;
+class Details
+{
+    String sname;
+    int srollno;
+    String ssection;
+    float sinternal_marks;
+    float external_marks;
+    float sproject_marks;
+  Details(String sname,int srollno, String ssection, float sinternal_marks, float external_marks,  float sproject_marks)
+  {
+       this. sname=sname;
+    this.srollno=srollno;
+    this. ssection=ssection;
+    this. sinternal_marks=sinternal_marks;
+    this. external_marks=external_marks;
+    this. sproject_marks=sproject_marks;
+  }
+  Details()
+  {
+      
+  }
+    void display()
+    {
+    System.out.println("Name:"+sname+"\nRollno:"+srollno+"\nsection:"+ssection);
+    }
+     void  grade()
+    {
+    float total_marks=(sinternal_marks+ external_marks+sproject_marks);
+    float max_marks=300;
+   float percentage=(total_marks/max_marks)*100;
+   System.out.println(percentage);
+   
+        if (percentage>=90 && percentage<=100)
+            {
+        System.out.println("Grade A");
+        }
+        else if (percentage>=80 && percentage<=90)
+       
+        {
+            System.out.println("Grade B");
+        }
+        else if (percentage>=70 && percentage<=80)
+        {
+            System.out.println("Grade C");
+        }
+        else if (percentage>=60 && percentage<=70)
+        {
+        System.out.println("Grade D");
+        }
+       else if (percentage>=50 && percentage<=60)
+        {
+        System.out.println("Grade E");
+        }
+        else  if (percentage>=40 && percentage<=50)
+        {
+           
+        System.out.println("Grade f");
+        }
+        else
+        {
+             System.out.println("Fail");
+        }
+    }
+   
+}
+class Studentconstructor
+{
+    public static void main(String args[])
+    {
+        Details std1=new Details("Anil",111,"A",88,78,98);
+        
+         System.out.println("-----------student1 details---------");
+        std1.display();
+        std1.grade();
+         Details std2=new Details();
+        
+        System.out.println("-----------student2 details---------");
+        std2.display();
+         std2.grade();
+        
+    }
+}
+---------------------------------------------------------------
+class Summation
+{
+    static void sum(int a)
+    {
+       int sum=0;
+        for (int i=0;i<=a;i++)
+        {
+            sum=sum+i;
+        }
+        System.out.println(sum);
+    }
+}
+class Sumofn
+{
+    public static void main(String args[])
+    {
+        Summation.sum(10);
+    }
+}
+-------------------------------------------------------------------
+import java.util.*;
+class Bank
+{
+String name;
+long accountno;
+String accounttype;
+Scanner sc=new Scanner (System.in);
+void input()
+{
+
+System.out.println("Enter name");
+name=sc.next();
+System.out.println("Enter account no");
+accountno=sc.nextLong();
+System.out.println("Enter account type");
+accounttype=sc.next();
+}
+void display()
+{
+    System.out.println(name+accountno+accounttype);
+}
+}
+class Currentaccount extends Bank
+{
+    double balance=100;
+   // System.out.println("Enter total balanace");
+    //balance=sc.nextDouble();
+    void deposit1()
+    {
+    double deposit;
+    System.out.println("Enter deposit amount");
+    deposit=sc.nextDouble();
+    balance=balance+deposit;
+    System.out.println(balance);
+    }
+    void withdraw()
+    {
+        double withdraw;
+        System.out.println("Withdraw amount");
+        withdraw=sc.nextDouble();
+        if(withdraw>balance)
+        {
+            System.out.println("Withdraw the amount");
+        }
+        else
+        {
+            balance=balance-withdraw;
+            System.out.println("remaining balanace amount"+balance);
+            //System.out.println("No");
+        }
+    }
+}
+class Account
+{
+    public static void main(String args[])
+    {
+        Currentaccount ac=new Currentaccount();
+        ac.input();
+        ac.display();
+        ac.deposit1();
+        ac.withdraw();
+    }
+}
+---------------------------------------------------
+
+class P {
+int a = 5;
+}
+class Q extends P {
+void display() {
+System.out.println("The value of a into Q class is:" + a);
+}
+}
+class R extends P {
+void display() {
+System.out.println("The value of a into R class is:" + a);
+}
+}
+class Practise
+{
+public static void main(String args[])
+{
+Q q1 = new Q();
+q1.display();
+R r1 = new R();
+r1.display();
+}
+}
+----------------------------------------------------------
+class Animal
+{
+String color="black";
+String bread;
+}
+class Dog extends Animal
+{
+String color="red";
+void display()
+{
+System.out.println(super.color);
+}
+void bark()
+{
+System.out.println("barking..........");
+}
+}
+class cat extends Dog{
+String color="white";
+void display1()
+{
+System.out.println(super.color);
+}
+}
+class Superex1
+{
+public static void main(String args[])
+{
+cat d=new cat();
+//d.color="red";
+d.bread="jarman";
+d.display1();
+d.display();
+System.out.println(d.color);
+}
+}
+------------------------------------------------------
+class Animal
+{
+String color="black";
+String bread;
+}
+class Dog extends Animal
+{
+String color="red";
+void display()
+{
+System.out.println(super.color);
+}
+void bark()
+{
+System.out.println("barking..........");
+}
+}
+
+
+class Superex2
+{
+public static void main(String args[])
+{
+Dog d=new Dog();
+//d.color="red";
+d.bread="jarman";
+//d.display1();
+d.display();
+System.out.println(d.color);
+}
+}
+------------------------------------------
+class Animal
+{
+String color="black";
+String bread;
+Animal()
+{
+    this.color=color;
+     System.out.println("Animal is created");
+}
+}
+class Dog extends Animal
+{
+    Dog()
+    {
+        super();
+        System.out.println("dog is created");
+    }
+String color="red";
+/*void display()
+{
+System.out.println(super.color);
+}*/
+void bark()
+{
+System.out.println("barking..........");
+}
+}
+
+class Superex3
+{
+public static void main(String args[])
+{
+Dog d=new Dog();
+//d.color="red";
+d.bread="jarman";
+//d.display1();
+//d.display();
+System.out.println(d.color);
+}
+}
+----------------------------------------
+class Animal{  
+void eat()
+{
+    System.out.println("eating...");
+    
+}  
+}  
+class Dog extends Animal
+{  
+void eat()
+{
+    System.out.println("eating bread...");
+    
+}  
+void bark()
+{
+    System.out.println("barking...");
+    
+}  
+void work()
+{  
+super.eat();  
+bark();  
+}  
+}  
+class Superex4
+{  
+public static void main(String args[])
+{  
+Dog d=new Dog();  
+d.work();  
+}
+    
+}  
+---------------------------------------------------
+class Shape
+{
+    void method1()
+    {
+        System.out.println("This is Shape");
+    }
+}
+class Rectangle extends Shape
+{
+    void method2()
+    {
+        System.out.println("This is Rectangle Shape");
+    }
+}
+class Circle extends Shape
+{
+    void method3()
+    {
+        System.out.println("This Circle Shape");
+    }
+}
+class Square extends Rectangle
+{
+    void method4()
+    {
+        System.out.println("Square is not a Rectangle");
+    }
+}
+class Superex5
+{
+    public static void main(String args[])
+    {
+        Square s=new Square();
+        s.method2();
+        s.method1();
+    }
+}
+--------------------------------------------------------
+class Rectangle
+{
+    float length=5;
+    float breadth=6;
+
+Rectangle()
+{
+    this.length=length;
+    this.breadth=breadth;
+}
+void area1()
+{
+   float area=length*breadth;
+   System.out.println("Area of Rectangle::"+area);
+}
+void perimeter1()
+{
+    float perimeter=2*(length*breadth);
+    System.out.println("Perimeter of Rectangle:"+perimeter);
+}
+}
+class Square extends Rectangle
+{
+    
+    Square()
+    {
+        
+        super ();
+        
+    }
+    float length=4;
+    void area2()
+    {
+    float sarea=4*length;
+    System.out.println("Area of Square::"+sarea);
+}
+}
+class Superex6
+{
+    public static void main(String args[])
+    {
+        Square s=new Square();
+       s.area1();
+        s.perimeter1();
+        s.area2();
+    }
+}
+---------------------------------------------------------
+
