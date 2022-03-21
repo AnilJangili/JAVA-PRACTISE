@@ -1192,4 +1192,416 @@ class Superex6
     }
 }
 ---------------------------------------------------------
+abstract class Bank
+{
+    abstract void rateofintrest();
+}
+class Sbi extends Bank
+{
+    void rateofintrest()
+    {
+        System.out.println("SBI Rate of Intrest is 6%");
+    }
+}
+class Union extends Bank
+{
+    void rateofintrest()
+    {
+        System.out.println("UNION Bank Rate of Intrest is 7%");
+    }
+}
+class Axis extends Bank
+{
+    void rateofintrest()
+    {
+        System.out.println("AXIS Bank Rate of Intrest is 8%");
+    }
+}
+class Abstractex1
+{
+    public static void main(String args[])
+    {
+        Bank s=new Sbi();
+        s.rateofintrest();
+         Bank u=new Union();
+        u.rateofintrest();
+         Bank a=new Axis();
+        a.rateofintrest();
+    }
+}
+--------------------
+abstract class Shape{
+abstract void draw();
+}
+class Circle extends Shape{
+void draw()
+{
+System.out.println("circle");
+}
+}
+class Square extends Shape
+{
+void draw()
+{
+System.out.println("Square");
+}
+}
+class Rectangle extends Shape{
+void draw()
+{
+System.out.println("Rectangle");
+}
+}
+class Abstractex2
+{
+public static void main(String args[])
+{
+Shape c=new Circle();
+c.draw();
+Shape s=new Square();
+s.draw();
+Shape r=new Rectangle();
+r.draw();
+}
+}
+------------------------
+abstract class Animal 
+{
+    abstract void eat();
+}
+class Dog extends Animal
+{
+    void eat()
+    {
+    System.out.println("Dog is eating biscuits");
+    }
+}
+class Cat extends Animal
+{
+    void eat()
+    {
+    System.out.println("Cat is eating biscuits");
+    }
+}
+class Abstractex3
+{
+    public static void main(String args[])
+    {
+        Animal d=new Dog();
+        d.eat();
+        Animal c=new Cat();
+        c.eat();
+    }
+}
+-------------------
+interface  Bank
+{
+     void rateofintrest();
+}
+class Sbi implements Bank
+{
+   public void rateofintrest()
+    {
+        System.out.println("SBI Rate of Intrest is 6%");
+    }
+}
+class Union implements Bank
+{
+   public void rateofintrest()
+    {
+        System.out.println("UNION Bank Rate of Intrest is 7%");
+    }
+}
+class Axis implements Bank
+{
+   public void rateofintrest()
+    {
+        System.out.println("AXIS Bank Rate of Intrest is 8%");
+    }
+}
+class Interfaceex1
+{
+    public static void main(String args[])
+    {
+        Bank s=new Sbi();
+        s.rateofintrest();
+         Bank u=new Union();
+        u.rateofintrest();
+         Bank a=new Axis();
+        a.rateofintrest();
+    }
+}
+---------------------------
+interface Animal 
+{
+    abstract void eat();
+}
+class Dog implements Animal
+{
+   public void eat()
+    {
+    System.out.println("Dog is eating biscuits");
+    }
+}
+class Cat implements Animal
+{
+   public void eat()
+    {
+    System.out.println("Cat is eating biscuits");
+    }
+}
+class Interfaceex2
+{
+    public static void main(String args[])
+    {
+        Animal d=new Dog();
+        d.eat();
+        Animal c=new Cat();
+        c.eat();
+    }
+}
+-------------------------
+interface Shape{
+    int side=1; //public static final int side=1(JVM reffered )
+abstract void draw();
+}
+class Circle implements Shape{
+public void draw()
+{
+System.out.println("circle");
+}
+}
+class Square implements Shape
+{
+public void draw()
+{
+System.out.println("Square");
+}
+}
+class Rectangle implements Shape{
+public void draw()
+{
+System.out.println("Rectangle");
+}
+}
+class Interfaceex3
+{
+public static void main(String args[])
+{
+Shape c=new Circle();
+c.draw();
+Shape s=new Square();
+s.draw();
+Shape r=new Rectangle();
+r.draw();
+}
+}
+----------------------
+class Adder
+{
+static void Add(int a,int b)
+{
+System.out.println((a+b));
+}
+static void Add(int a,int b,int c)
+{
+System.out.println((a+b+c));
+}
+static void Add(double a,double b)
+{
+System.out.println((a+b));
+}
+static void Add(int a,double d)
+{
+System.out.println((a+d));
+}
+}
+
+class Polyex1
+{
+public static void main(String args[])
+{
+Adder.Add(2,4,5);
+Adder.Add(23.5,12.6);
+}
+}
+-------------------
+class Shape
+{
+    static void draw(int l,int b)
+    {
+        System.out.println("Area of Rectangle is:"+l*b);
+    }
+    static void draw(int s)
+    {
+        System.out.println("Area of square is:"+ 4*s);
+    }
+    static void draw (int s1,int s2,int s3)
+    {
+        System.out.println("Area of Triangle is:"+ (0.5*s2*s3));
+    }
+}
+class Polyex2
+{
+    public static void main(String args[])
+    {
+        Shape.draw(2,5);
+        Shape.draw(5);
+        Shape.draw(3,4,5);
+    }
+}
+---------------------
+class Shape
+{
+     void draw(int l,int b)
+    {
+        System.out.println("Area of Rectangle is:"+l*b);
+    }
+     void draw(int s)
+    {
+        System.out.println("Area of square is:"+ 4*s);
+    }
+     void draw (int s1,int s2,int s3)
+    {
+        System.out.println("Area of Triangle is:"+ (0.5*s2*s3));
+    }
+}
+class Polyex3
+{
+    public static void main(String args[])
+    {
+        Shape s=new Shape();
+        s.draw(2,9);
+        s.draw(8);
+        s.draw(7,4,11);
+    }
+}
+--------------------------
+import java.util.*;
+class Student
+{
+private int rollno;
+private String name;
+private String section;
+void setRollno(int rollno)//set the values for private datamembers
+{
+this.rollno=rollno;
+}
+void setName(String name)
+{
+this.name=name;
+}
+void setSection(String section)
+{
+this.section=section;
+}
+//to get the private variables
+int getRollno()
+{
+return this.rollno;
+}
+String getName()
+{
+return this.name;
+}
+String getSection()
+{
+return this.section;
+}
+}
+
+class Encapsuleex1
+{
+public static void main(String args[])
+{
+Student s=new Student();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a rollno");
+int r=sc.nextInt();
+s.setRollno(r);
+System.out.println("enter name");
+String n=sc.next();
+s.setName(n);
+System.out.println("enter section");
+String s1=sc.next();
+s.setSection(s1);
+System.out.println(s.getRollno());
+System.out.println(s.getName());
+System.out.println(s.getSection());
+}
+}
+-----------------------------
+/*create bean class Employee
+
+declare private variables eid,ename,esalary
+
+setters and getters
+
+main class create 2 objects*/
+import java.util.*;
+class Employee
+{
+private int eid;
+private String ename;
+private int esalary;
+void setEid(int eid)//set the values
+{
+    this.eid=eid;
+}
+void setEname(String ename)
+{
+    this.ename=ename;
+    }
+void setEsalary(int esalary)
+{
+    this.esalary=esalary;
+}
+int getEid()//get the values
+{
+    return this.eid;
+}
+String getEname()
+{
+    return this.ename;
+}
+int getEsalary()
+{
+    return this.esalary;
+}
+}
+class Encapsuleex2
+{
+    public static void main(String args[])
+    {
+        Employee e1=new Employee();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter eid");
+        int i=sc.nextInt();
+        e1.setEid(i);
+        System.out.println("Enter Name");
+        String n=sc.next();
+        e1.setEname(n);
+        System.out.println("Enter Salary");
+        int s=sc.nextInt();
+        e1.setEsalary(s);
+        System.out.println(e1.getEid());
+        System.out.println(e1.getEname());
+        System.out.println(e1.getEsalary());
+        Employee e2=new Employee();
+         System.out.println("Enter eid");
+        int i1=sc.nextInt();
+        e2.setEid(i1);
+        System.out.println("Enter Name");
+        String n1=sc.next();
+        e2.setEname(n1);
+        System.out.println("Enter Salary");
+        int s1=sc.nextInt();
+        e2.setEsalary(s1);
+        System.out.println(e2.getEid());
+        System.out.println(e2.getEname());
+        System.out.println(e2.getEsalary());
+       
+    }
+}
+---------------------------
 
